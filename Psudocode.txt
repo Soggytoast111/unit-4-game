@@ -1,0 +1,34 @@
+(Have variables to control state of game.  Use "While" loop to set event listeners.)
+
+*Select Character - $(div).onclick(function())
+
+(everything position:absolute)
+
+- One large "playfield" div to hold all game elements.
+
+- Four square divs in four corners of the screen.
+
+- Each div has three small divs at the bottom for their attributes.
+
+----
+
+* Attack mode -
+
+- Selected character slides to center of top row 
+
+- Have separate function for each selected character
+
+- Each function slides all divs to correct position (animate)
+
+- Attribute Divs now change (all divs always exist, but hide/show during correct phase): 
+--Selected character only displays attack and health.
+--Enemy characters only display counterattack  
+
+----
+
+Select enemy $(div).onclick(function)
+
+-- All other enemies disappear
+
+-- Selected enemy 
+
