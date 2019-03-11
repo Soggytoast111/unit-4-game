@@ -11,6 +11,13 @@ body {
 
 }
 
+#attackdata {
+    position: absolute;
+    top: 35px;
+    left: 0px;
+
+}
+
 .character {
     height: 200px;
     width: 200px;
@@ -64,5 +71,10 @@ body {
 
 #killbtn4 {
     top: 200px;
+    right: 50px;
+}
+
+#attack {
+    top: 250px;
     right: 50px;
 }
