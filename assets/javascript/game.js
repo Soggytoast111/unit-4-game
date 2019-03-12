@@ -20,6 +20,9 @@ var lifePoint = 1
 //enemy health
 var enemyPoint = 1
 
+//Character Select Arrays
+var chararray = [0, character1, character2, character3, character4]
+
 writeText("Select your character!")
 
 //On Click events for all divs
@@ -317,6 +320,26 @@ $("#attack").click(function() {
     attack()
 }) 
 
+//Hit button
+$("#hitanimation").click(function(){
+hitanimation()
+})
+
+//Atkanim button
+$("#atkanimation").click(function(){
+    attackanimation()
+    })
+
+//Defanim button
+$("#defanimation").click(function(){
+    defanimation()
+    })
+
+//Damage button
+$("#damageanimation").click(function(){
+    damageanimation()
+    })
+
 //Win the game
 function winGame () {
     writeText("A winner is you!")
@@ -341,4 +364,52 @@ $("#attackdata").html(
     "Enemy Health: " + enemyPoint
     )
 }
+
+
+//Hit (player)animation
+function hitanimation() {
+    chararray[selectedchar].animate({left: '+=32px'}, 75, function (){
+        chararray[selectedchar].animate({left: '-=58px'}, 75, function (){
+            chararray[selectedchar].animate({left: '+=32px'}, 75, function() {
+                chararray[selectedchar].animate({left: '-=13px'}, 75, function () {
+                    chararray[selectedchar].animate({left: '+=10px'}, 75, function () {
+                        chararray[selectedchar].animate({left: '-=4px'}, 75, function () {
+                            chararray[selectedchar].animate({left: '+=2px'}, 75, function () {
+                                chararray[selectedchar].animate({left: '-=1px'}, 75, )
+
+                            })
+
+                        })
+                    })})})})})}
+
+//Hit (enemy) animation
+function damageanimation() {
+    chararray[selectedenemy].animate({left: '+=32px'}, 75, function (){
+        chararray[selectedenemy].animate({left: '-=58px'}, 75, function (){
+            chararray[selectedenemy].animate({left: '+=32px'}, 75, function() {
+                chararray[selectedenemy].animate({left: '-=13px'}, 75, function () {
+                    chararray[selectedenemy].animate({left: '+=10px'}, 75, function () {
+                        chararray[selectedenemy].animate({left: '-=4px'}, 75, function () {
+                            chararray[selectedenemy].animate({left: '+=2px'}, 75, function () {
+                                chararray[selectedenemy].animate({left: '-=1px'}, 75, )
+
+                            })
+
+                        })
+                    })})})})})}
+
+
+//Attack animation
+function attackanimation() {
+    chararray[selectedchar].animate({top: '-=20px',}, 60, function() {
+        chararray[selectedchar].animate({top: '+=100px'}, 75, function(){
+            chararray[selectedchar].animate({top: '-=80px'}, 200)
+})})}
+
+//Defend animation
+function defanimation() {
+    chararray[selectedenemy].animate({top: '+=20px',}, 60, function() {
+        chararray[selectedenemy].animate({top: '-=100px'}, 75, function(){
+            chararray[selectedenemy].animate({top: '+=80px'}, 200)
+})})}
 

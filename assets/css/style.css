@@ -1,6 +1,9 @@
 body {
     margin-left: 5%;
     margin-right: 5%;
+    background-image: url("../images/background.png");
+    background-repeat: repeat;
+
 
 }
 
@@ -78,3 +81,55 @@ body {
     top: 250px;
     right: 50px;
 }
+
+#hitanimation {
+    top: 300px;
+    right: 50px;
+
+}
+
+#negman {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    right: 0px;
+}
+
+#trump {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    right: 0px;
+}
+
+#king {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    right: 0px;
+    }
+
+#squid {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    right: 0px;
+    }
+
+    #atkanimation {
+        top: 350px;
+        right: 50px;
+    
+    }
+
+    #defanimation {
+        top: 400px;
+        right: 50px;
+
+    }
+    
+    #damageanimation {
+        top: 450px;
+        right: 50px;
+
+    }
