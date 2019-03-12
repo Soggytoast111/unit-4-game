@@ -45,6 +45,7 @@ character1.click(function(){
     selectedenemy = 1
     enemyPoint = charHealth[selectedenemy]
     state++
+    atkshow()
     }
     
     else if (state == 1 && selectedchar == 3) {
@@ -55,6 +56,7 @@ character1.click(function(){
     selectedenemy = 1
     enemyPoint = charHealth[selectedenemy]
     state++
+    atkshow()
     }
     
     else if (state == 1 && selectedchar == 4) {
@@ -65,6 +67,7 @@ character1.click(function(){
     selectedenemy = 1
     enemyPoint = charHealth[selectedenemy]
     state++
+    atkshow()
     }
 
     else if (state == 3||4 && selectedchar != 1) {
@@ -73,6 +76,7 @@ character1.click(function(){
     selectedenemy = 1
     enemyPoint = charHealth[selectedenemy]
     state++
+    atkshow()
     }
 })
 
@@ -95,6 +99,7 @@ character2.click(function(){
     selectedenemy = 2
     enemyPoint = charHealth[selectedenemy]
     state++
+    atkshow()
     }
 
     else if (state == 1 && selectedchar == 3) {
@@ -104,6 +109,7 @@ character2.click(function(){
     selectedenemy = 2
     enemyPoint = charHealth[selectedenemy]
     state++
+    atkshow()
     }
 
     else if (state == 1 && selectedchar == 4) {
@@ -113,6 +119,7 @@ character2.click(function(){
     selectedenemy = 2
     enemyPoint = charHealth[selectedenemy]
     state++
+    atkshow()
     }
 
     else if (state == 3||4 && selectedchar != 2) {
@@ -121,6 +128,7 @@ character2.click(function(){
     selectedenemy = 2
     enemyPoint = charHealth[selectedenemy]
     state++
+    atkshow()
     }
 })
 
@@ -144,6 +152,7 @@ character3.click(function(){
     selectedenemy = 3
     enemyPoint = charHealth[selectedenemy]
     state++
+    atkshow()
     }
         
     else if (state == 1 && selectedchar == 1) {
@@ -154,6 +163,7 @@ character3.click(function(){
     selectedenemy = 3
     enemyPoint = charHealth[selectedenemy]
     state++
+    atkshow()
     }
         
     else if (state == 1 && selectedchar == 4) {
@@ -164,6 +174,7 @@ character3.click(function(){
     selectedenemy = 3
     enemyPoint = charHealth[selectedenemy]
     state++
+    atkshow()
     }
 
     else if (state == 3||4 && selectedchar != 3) {
@@ -172,6 +183,7 @@ character3.click(function(){
     selectedenemy = 3
     enemyPoint = charHealth[selectedenemy]
     state++
+    atkshow()
     }
 
 })
@@ -196,6 +208,7 @@ character4.click(function(){
     selectedenemy = 4
     enemyPoint = charHealth[selectedenemy]
     state++
+    atkshow()
     }
             
     else if (state == 1 && selectedchar == 1) {
@@ -206,6 +219,7 @@ character4.click(function(){
     selectedenemy = 4
     enemyPoint = charHealth[selectedenemy]
     state++
+    atkshow()
     }
             
     else if (state == 1 && selectedchar == 3) {
@@ -216,6 +230,7 @@ character4.click(function(){
     selectedenemy = 4
     enemyPoint = charHealth[selectedenemy]
     state++
+    atkshow()
     }
 
     else if (state == 3||4 && selectedchar != 4) {
@@ -224,6 +239,7 @@ character4.click(function(){
     selectedenemy = 4
     enemyPoint = charHealth[selectedenemy]
     state++
+    atkshow()
     }
 })
 
@@ -298,21 +314,35 @@ function killEnemy4() {
 
 }
 
+//Attack Button (The real one!)
+$("#attack1").click(function() {
+    attackanimation();
+    setTimeout(function() {damageanimation();}, 500)
+    setTimeout(function() {defanimation();}, 1250)
+    setTimeout(function() {hitanimation();}, 1750)
+    attack()
+    atkDisp()
+})
+
 //kill buttons (debug/dev purpose only) 
 $("#killbtn1").click(function() {
     killEnemy1()
+    atkhide()
 })
 
 $("#killbtn2").click(function() {
     killEnemy2()
+    atkhide()
 })
 
 $("#killbtn3").click(function() {
     killEnemy3()
+    atkhide()
 })
 
 $("#killbtn4").click(function() {
     killEnemy4()
+    atkhide()
 })
 
 //Attack button
@@ -413,3 +443,12 @@ function defanimation() {
             chararray[selectedenemy].animate({top: '+=80px'}, 200)
 })})}
 
+//Animate Attack Button
+
+function atkshow() {
+    $("#attack1").animate({left: '657px'}, "fast")
+}
+
+function atkhide() {
+    $("#attack1").animate({left: '2000'}, "fast")
+}

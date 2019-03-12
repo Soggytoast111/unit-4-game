@@ -25,7 +25,13 @@ body {
     height: 200px;
     width: 200px;
     position: absolute;
-
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-style: groove;
+    border-width: 5px;
+    border-color: purple;
 }
 
 #character1 {
@@ -132,4 +138,14 @@ body {
         top: 450px;
         right: 50px;
 
+    }
+
+    #attack1 {
+        height: 25px;
+        width: 75px;
+        background-color: red;
+        color: white;
+        position: absolute;
+        left: 2000px;
+        top: 150px;
     }
