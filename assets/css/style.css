@@ -141,11 +141,133 @@ body {
     }
 
     #attack1 {
-        height: 25px;
+        height: 30px;
         width: 75px;
         background-color: red;
         color: white;
         position: absolute;
         left: 2000px;
         top: 150px;
+        border-radius: 0px;
+        padding-top: 5px;
+        text-align: center;
+    }
+
+    .iconbox {
+        height: 35px;
+        width: 35px;
+        z-index: 200;
+        position: absolute;
+        top: 150px;
+        left: 15px;
+        border-style: outset;
+        border-color: gray;
+        border-width: 2px;
+        background-color: #4b9dcc;
+    }
+
+    .iconboxT {
+        height: 30px;
+        width: 35px;
+        z-index: 200;
+        position: absolute;
+        top: 150px;
+        left: 15px;
+        border-style: outset;
+        border-color: gray;
+        border-width: 2px;
+        color: yellow;
+        font-style: bold;
+        font-size: 20px;
+        text-align: center;
+        padding-top: 5px;
+    }
+
+    .icon {
+        height: 35px;
+        width: 35px;
+    }
+
+    .iconbox2 {
+        height: 35px;
+        width: 35px;
+        z-index: 200;
+        position: absolute;
+        top: 150px;
+        left: 70px;
+        border-style: outset;
+        border-color: gray;
+        border-width: 2px;
+        background-color: #bd3c3c;
+    }
+
+    .iconbox2T {
+        height: 30px;
+        width: 35px;
+        z-index: 200;
+        position: absolute;
+        top: 150px;
+        left: 70px;
+        border-style: outset;
+        border-color: gray;
+        border-width: 2px;
+        color: yellow;
+        font-style: bold;
+        font-size: 20px;
+        text-align: center;
+        padding-top: 5px;
+    }
+
+    .iconbox3 {
+        height: 35px;
+        width: 35px;
+        z-index: 200;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        border-style: outset;
+        border-color: gray;
+        border-width: 2px;
+        background-color: #bd3c3c;
+    }
+
+    .iconbox3T {
+        height: 29px;
+        width: 35px;
+        z-index: 200;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        border-style: outset;
+        border-color: gray;
+        border-width: 2px;
+        color: yellow;
+        font-style: bold;
+        font-size: 20px;
+        text-align: center;
+        padding-top: 6px;
+    }
+
+    .title {
+        position: absolute;
+        top: -50px;
+        left: -40px;
+    }
+
+    .title2 {
+        position: absolute;
+        top: -50px;
+        left: -95px;
+    }
+
+    .title3 {
+        position: absolute;
+        top: -50px;
+        left: -125px;
+    }
+
+    .title4 {
+        position: absolute;
+        top: -50px;
+        left: -55px;
     }

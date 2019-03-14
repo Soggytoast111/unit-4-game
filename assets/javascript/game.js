@@ -70,7 +70,7 @@ character1.click(function(){
     atkshow()
     }
 
-    else if (state == 3||4 && selectedchar != 1) {
+    else if (state == 3|| state == 5  && selectedchar != 1) {
     character1.animate({top: '300px', left: '407px'});
     writeText("Fight!")
     selectedenemy = 1
@@ -122,7 +122,7 @@ character2.click(function(){
     atkshow()
     }
 
-    else if (state == 3||4 && selectedchar != 2) {
+    else if (state == 3|| state == 5  && selectedchar != 2) {
     character2.animate({top: '300px', left: '407px'});
     writeText("Fight!")
     selectedenemy = 2
@@ -177,7 +177,7 @@ character3.click(function(){
     atkshow()
     }
 
-    else if (state == 3||4 && selectedchar != 3) {
+    else if (state == 3|| state == 5  && selectedchar != 3) {
     character3.animate({top: '300px', left: '407px'});
     writeText("Fight!")
     selectedenemy = 3
@@ -233,7 +233,7 @@ character4.click(function(){
     atkshow()
     }
 
-    else if (state == 3||4 && selectedchar != 4) {
+    else if (state == 3|| state == 5 && selectedchar != 4) {
     character4.animate({top: '300px', left: '407px'});
     writeText("Fight!")
     selectedenemy = 4
