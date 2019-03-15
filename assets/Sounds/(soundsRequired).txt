@@ -1,0 +1,17 @@
+Specific Characters:
+*Chosen sound
+*Attack sound
+*Victory sound
+*Death sound
+
+Sound FX:
+*Attack
+*Damage
+
+Music:
+*Title Screen
+*Character Selection
+*Battle
+*Victory
+*Loss
+
