@@ -295,3 +295,19 @@ body{
         display: none;
 
     }
+
+    #reset {
+        height: 30px;
+        width: 75px;
+        background-color: green;
+        color: white;
+        position: absolute;
+        left: 657px;
+        top: 350px;
+        border-radius: 0px;
+        padding-top: 5px;
+        text-align: center;
+        display: none;
+    } 
+
+    

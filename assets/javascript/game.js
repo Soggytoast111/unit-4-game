@@ -10,7 +10,7 @@ var selectedchar = 0
 var selectedenemy = 0
 
 //vars for character stats
-var charHealth = [0, 750, 500, 100, 1000]
+var charHealth = [0, 750, 500, 300, 500]
 var charAtk = [0, 25, 20, 5, 1]
 var charEA = [0, 20, 25, 17, 1]
 var attackgrow = [0, 2, 3, 10, 2]
@@ -353,22 +353,32 @@ function killEnemy4() {
     }
 
 }
+var disable = 0
 
 //Attack Button (The real one!)
 $("#attack1").click(function() {
-    attackanimation();
-    playcharsound(charpickarray[selectedchar], "attack")
-    setTimeout(function() {damageanimation();}, 500)
-    setTimeout(function() {playatksound();}, 50)
-    setTimeout(function() {defanimation();}, 1250)
-    setTimeout(function() {playatksound();}, 1250)
-    setTimeout(function() {hitanimation();}, 1750)
-    attack()
-    atkDisp()
-    atkcalc()
-    atkgrow()
-    if (enemyPoint <=0) {
-        killarray[selectedenemy]()
+    if (disable == 0){
+        disable = 1
+        attackanimation();
+        playcharsound(charpickarray[selectedchar], "attack")
+        setTimeout(function() {damageanimation();}, 500)
+        setTimeout(function() {playatksound();}, 50)
+        setTimeout(function() {defanimation();}, 1250)
+        setTimeout(function() {playatksound();}, 1250)
+        setTimeout(function() {hitanimation();}, 1750)
+        setTimeout(function() {disable=0}, 3000)
+        attack()
+        atkDisp()
+        atkcalc()
+        atkgrow()
+        if (enemyPoint <=0) {
+            killarray[selectedenemy]()
+            document.getElementById("charsound").pause()
+        }
+
+        else if (lifePoint <=0) {
+            loseGame ()
+        }
     }
 
 })
@@ -422,13 +432,24 @@ $("#damageanimation").click(function(){
     })
 
 //Win the game
+var charfix = [0, "king", "trump", "squid", "neg"]
+
 function winGame () {
     writeText("A winner is you!")
+    playcharsound(charfix[selectedchar], "win")
+    document.getElementById("music").pause()
+    document.getElementById("music").src = "assets/Sounds/music/win.mp3"
+    document.getElementById("music").play()
+    $("#reset").show()
 }
 
 //Lose the game
 function loseGame () {
     writeText ("You lose!")
+    playcharsound(charfix[selectedchar], "die")
+    document.getElementById("music").pause()
+    document.getElementById("music").src = "assets/Sounds/music/death.mp3"
+    document.getElementById("music").play()
 }
 
 //Attacking scripts
@@ -579,3 +600,24 @@ function atkgrow() {
 function setplayerattack() {
     playerattack = charAtk[selectedchar]
 }
+
+
+
+$("#reset").click(function(){
+    healthint()
+    atkinit()
+    definit()
+    state = 0
+    selectedchar = 0
+    selectedenemy = 0
+    character1.show()
+    character1.animate({top: '150px', left: '100px'})
+    character2.show()
+    character2.animate({top: '150px', left: '550px'})
+    character3.show()
+    character3.animate({top: '400px', left: '100px'})
+    character4.show()
+    character4.animate({top: '400px', left: '550px'})
+    playmusic()
+    $("#reset").hide()
+})
