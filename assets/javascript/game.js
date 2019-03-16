@@ -451,6 +451,9 @@ function loseGame () {
     document.getElementById("music").pause()
     document.getElementById("music").src = "assets/Sounds/music/death.mp3"
     document.getElementById("music").play()
+    $("#reset").show()
+    chararray[selectedchar].hide()
+    chararray[selectedchar].animate({top: '2000px', right: '2000px'})
 }
 
 //Attacking scripts
