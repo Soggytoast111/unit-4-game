@@ -10,7 +10,7 @@ var selectedchar = 0
 var selectedenemy = 0
 
 //vars for character stats
-var charHealth = [0, 750, 500, 300, 500]
+var charHealth = [0, 150, 100, 60, 250]
 var charAtk = [0, 25, 20, 5, 1]
 var charEA = [0, 20, 25, 17, 1]
 var attackgrow = [0, 2, 3, 10, 2]
@@ -441,7 +441,7 @@ function winGame () {
     document.getElementById("music").pause()
     document.getElementById("music").src = "assets/Sounds/music/win.mp3"
     document.getElementById("music").play()
-    $("#reset").show()
+    setTimeout(function() {$("#reset").show()}, 5000)
 }
 
 //Lose the game
@@ -451,7 +451,7 @@ function loseGame () {
     document.getElementById("music").pause()
     document.getElementById("music").src = "assets/Sounds/music/death.mp3"
     document.getElementById("music").play()
-    $("#reset").show()
+    setTimeout(function() {$("#reset").show()}, 5000)
     chararray[selectedchar].hide()
     chararray[selectedchar].animate({top: '2000px', right: '2000px'})
 }
@@ -608,12 +608,6 @@ function setplayerattack() {
 
 
 $("#reset").click(function(){
-    healthint()
-    atkinit()
-    definit()
-    state = 0
-    selectedchar = 0
-    selectedenemy = 0
     character1.show()
     character1.animate({top: '150px', left: '100px'})
     character2.show()
@@ -622,6 +616,13 @@ $("#reset").click(function(){
     character3.animate({top: '400px', left: '100px'})
     character4.show()
     character4.animate({top: '400px', left: '550px'})
+    healthint()
+    atkinit()
+    definit()
+    state = 0
+    selectedchar = 0
+    selectedenemy = 0
     playmusic()
+    atkhide()
     $("#reset").hide()
 })
