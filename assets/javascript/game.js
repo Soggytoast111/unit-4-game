@@ -373,7 +373,7 @@ $("#attack1").click(function() {
         atkgrow()
         if (enemyPoint <=0) {
             killarray[selectedenemy]()
-            document.getElementById("charsound").pause()
+            document.getElementById("atksound").pause()
         }
 
         else if (lifePoint <=0) {
