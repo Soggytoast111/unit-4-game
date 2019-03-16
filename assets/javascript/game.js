@@ -369,11 +369,12 @@ $("#attack1").click(function() {
         setTimeout(function() {disable=0}, 3000)
         attack()
         atkDisp()
-        atkcalc()
+        setTimeout(function() {atkcalc();}, 1750)
         atkgrow()
         if (enemyPoint <=0) {
             killarray[selectedenemy]()
-            document.getElementById("atksound").pause()
+            setTimeout(function() {document.getElementById("atksound").pause()}, 55)
+            setTimeout(function() {document.getElementById("atksound").pause()}, 1755)
         }
 
         else if (lifePoint <=0) {
@@ -456,7 +457,7 @@ function loseGame () {
 function attack() {
 lifePoint = lifePoint - charEA[selectedenemy]
 enemyPoint = enemyPoint - playerattack
-atkDisp()
+setTimeout(function() {atkDisp();}, 1750)
 }
 
 //Attack Data display
