@@ -10,10 +10,10 @@ var selectedchar = 0
 var selectedenemy = 0
 
 //vars for character stats
-var charHealth = [0, 150, 100, 60, 250]
+var charHealth = [0, 190, 125, 80, 350]
 var charAtk = [0, 25, 20, 5, 1]
 var charEA = [0, 20, 25, 17, 1]
-var attackgrow = [0, 2, 3, 10, 2]
+var attackgrow = [0, 2, 1, 8, 10]
 
 
 //player attack
@@ -373,8 +373,8 @@ $("#attack1").click(function() {
         atkgrow()
         if (enemyPoint <=0) {
             killarray[selectedenemy]()
-            setTimeout(function() {document.getElementById("atksound").pause()}, 55)
-            setTimeout(function() {document.getElementById("atksound").pause()}, 1755)
+            setTimeout(function() {document.getElementById("atksound").pause()}, 50)
+            setTimeout(function() {document.getElementById("atksound").pause()}, 1685)
         }
 
         else if (lifePoint <=0) {
